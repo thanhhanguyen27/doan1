@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">QLTS</string>
+    <string name="t_i_kho_n">Tài khoản</string>
+    <string name="home">Home</string>
+    <string name="th_ng_b_o">Thông báo</string>
+    <string name="qrcode">QRCode</string>
+    <string name="codeqr">codeqr</string>
+    <string name="notification">notification</string>
+    <string name="quay_l_i">Quay lại</string>
+    <string name="baoduong">Bảo dưỡng</string>
+    <string name="tb">Thiết bị</string>
+    <string name="bd">Lịch bảo dưỡng</string>
+</resources>

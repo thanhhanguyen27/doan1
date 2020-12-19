@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.user.Fragment_QuenMatKhau">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
+    <ImageView
+        android:src="@mipmap/ic_bannerapp"
+        android:id="@+id/imageView2"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUsername"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUsername"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/edtNhapEmail"
+                    android:layout_width="269dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.246"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonGuiEmail"
+                    android:layout_gravity="center"
+                    android:layout_width="89dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/coner2"
+                    android:text="Gửi"
+                    android:textColor="@color/graydark"
+                    app:backgroundTint="@color/or" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="35dp"
+                android:text="Sử dụng mật khẩu để đăng nhập"
+                android:textColor="@color/blue"
+                android:textSize="19dp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.479" />
+
+        </LinearLayout>
+
+
+</LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

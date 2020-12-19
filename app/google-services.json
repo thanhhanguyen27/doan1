@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "982131183243",
+    "firebase_url": "https://qltsfirebase.firebaseio.com",
+    "project_id": "qltsfirebase",
+    "storage_bucket": "qltsfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982131183243:android:469c046f421481dfbf0e8e",
+        "android_client_info": {
+          "package_name": "com.example.qunltisn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982131183243-96fvk48vrvjenf03i5t92deev47c2ofj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLOEE-Bwyfk4R7wS2BuyoBexCQ3Xa77Kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982131183243-96fvk48vrvjenf03i5t92deev47c2ofj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

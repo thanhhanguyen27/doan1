@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login"
+    app:startDestination="@id/fragment_DangNhap">
+
+    <fragment
+        android:id="@+id/fragment_DangNhap"
+        android:name="com.example.qunltisn.fragment.user.Fragment_DangNhap"
+        android:label="Đăng Nhập">
+        <action
+            android:id="@+id/action_fragment_DangNhap_to_Fragment_DangKy"
+            app:destination="@id/Fragment_DangKy" />
+        <action
+            android:id="@+id/action_fragment_DangNhap_to_Fragment_QuenMatKhau"
+            app:destination="@id/Fragment_QuenMatKhau" />
+    </fragment>
+    <fragment
+        android:id="@+id/Fragment_DangKy"
+        android:name="com.example.qunltisn.fragment.user.Fragment_DangKy"
+        android:label="Đăng Ký"
+        tools:layout="@layout/fragment__dang_ky_fragment" />
+    <fragment
+        android:id="@+id/Fragment_QuenMatKhau"
+        android:name="com.example.qunltisn.fragment.user.Fragment_QuenMatKhau"
+        android:label="Quên Mật Khẩu"
+        tools:layout="@layout/fragment__quen_mat_khau_fragment">
+        <action
+            android:id="@+id/action_Fragment_QuenMatKhau_to_checkOTPFragment"
+            app:destination="@id/checkOTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOTPFragment"
+        android:name="com.example.qunltisn.fragment.user.CheckOTPFragment"
+        android:label="Check OTP" />
+</navigation>

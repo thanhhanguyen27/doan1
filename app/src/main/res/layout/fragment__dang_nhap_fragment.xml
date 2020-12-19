@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+
+            <ImageView
+                android:src="@mipmap/ic_bannerapp"
+                android:id="@+id/imageView2"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+            <EditText
+                android:layout_marginTop="10dp"
+            android:id="@+id/edittextuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/boder"
+            android:fadeScrollbars="false"
+            android:hint="Tên đăng nhập"
+            android:inputType="textPersonName|text"
+            android:textColor="#1C1B1B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/edittextpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/boder"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.522"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edittextuser" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="MissingConstraints">
+
+            <CheckBox
+                android:id="@+id/checkSaveLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_marginRight="20dp"
+                android:text="Lưu đăng nhập"
+                android:textSize="19dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.261"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewQuenMK"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:gravity="center"
+                android:text="Quên mật khẩu"
+                android:textColor="@color/blue"
+                android:textSize="19dp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/buttonDangNhap"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blue"
+                    android:shadowColor="#2196F3"
+                    android:text="Đăng Nhập"
+                    android:textColor="#ffff"
+                    android:textSize="16dp"
+                    app:backgroundTint="@color/blue" />
+
+                <Button
+                    android:id="@+id/buttonDangKy"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#F1DFAA"
+                    android:text="Đăng Ký"
+                    android:textColor="@color/graydark"
+                    android:textSize="16dp"
+                    app:backgroundTint="@color/or" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

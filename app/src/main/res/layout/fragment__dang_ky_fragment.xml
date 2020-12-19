@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".models.Fragment_DangKy">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="84dp"
+                    android:background="#fff8e1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="@color/graydark"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/edittextfullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Họ và tên"
+                    android:textSize="16dp"/>
+
+                <EditText
+                    android:id="@+id/edittextusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tên đăng nhập"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/edittextphonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/gray"
+                    android:hint="Số điện thoại"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/edittextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/edittextAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Địa chỉ"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:id="@+id/buttonSex"
+                    android:layout_width="237dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.206"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/buttonNu"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nữ"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/buttonNam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nam"
+                        android:textSize="15dp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonDangKy2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="25dp"
+                        android:text="Đăng Ký"
+                        android:textSize="16dp"
+                        android:textColor="#ffff"
+                        app:backgroundTint="@color/blue" />
+
+                    <Button
+                        android:id="@+id/buttonThoat"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="Thoát"
+                        android:textColor="@color/graydark"
+                        android:textSize="16dp"
+                        app:backgroundTint="@color/or" />
+                </LinearLayout>
+
+            </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

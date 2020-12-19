@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="device"
+            type="com.example.qunltisn.model.TSDeviceSetInfo" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/graylight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.device.DeviceInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/coner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageDevice"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:background="#CAC4C4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tenthietbi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:background="#FCFDFC"
+            android:text='@{String.format("%s", device.DeviceName)}'
+            android:textColor="#00b686"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageDevice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MaThietBi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="5dp"
+            android:background="#FCFDFC"
+            android:text='@{String.format("Mã: %s", device.DeviceCode)}'
+            android:textColor="@color/blacklittle"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageDevice"
+            app:layout_constraintTop_toBottomOf="@+id/tenthietbi" />
+
+        <TextView
+            android:id="@+id/loaiThietBi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="5dp"
+            android:background="#FCFDFC"
+            android:text='@{String.format("Loại: %s", device.Type)}'
+            android:textColor="@color/blacklittle"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageDevice"
+            app:layout_constraintTop_toBottomOf="@+id/MaThietBi" />
+
+        <TextView
+            android:id="@+id/HangSanXuat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="5dp"
+            android:background="#FCFDFC"
+            android:text='@{String.format("Xuất xứ: %s", device.Origin)}'
+            android:textColor="@color/blacklittle"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageDevice"
+            app:layout_constraintTop_toBottomOf="@+id/loaiThietBi" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/coner"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        tools:ignore="MissingConstraints">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="THÔNG TIN THIẾT BỊ"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Trạng thái" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    style="@style/textview_device_info"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#ffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:text="ID thiết bị" />
+
+                <TextView
+                    android:id="@+id/tvDeviceCode"
+                    style="@style/textview_device_info" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Giá" />
+
+                <TextView
+                    android:id="@+id/tvDeviceValue"
+                    style="@style/textview_device_info"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Địa điểm" />
+
+                <TextView
+                    style="@style/textview_device_info"
+                    android:id="@+id/tvLocation"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Ngày bắt đầu" />
+
+                <TextView
+                    style="@style/textview_device_info"
+                    android:id="@+id/tvTimeStart"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Ngày kết thúc" />
+
+                <TextView
+                    style="@style/textview_device_info"
+                    android:id="@+id/tvTimeEnd"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Nhà sản xuất" />
+
+                <TextView
+                    style="@style/textview_device_info"
+                    android:id="@+id/tvManufacture"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Mã tổ chức" />
+
+                <TextView
+                    style="@style/textview_device_info"
+                    android:id="@+id/tvOrganizationId"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Kế hoạch" />
+
+                <TextView
+                    style="@style/textview_device_info"
+                    android:id="@+id/tvSchedule"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/input_info_layout"
+                android:layout_marginLeft="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    style="@style/textview_device_title"
+                    android:textColor="@color/black"
+                    android:text="Ghi chú" />
+
+                <TextView
+                    style="@style/textview_device_info"
+                    android:id="@+id/tvNote"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
