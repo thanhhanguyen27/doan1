@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/fragmentListDevice">
+
+    <fragment
+        android:id="@+id/fragmentListDevice"
+        android:name="com.example.qunltisn.fragment.device.FragmentListDevice"
+        android:label="QLTS">
+        <action
+            android:id="@+id/action_fragmentListDevice_to_addDeviceFragment"
+            app:destination="@id/addDeviceFragment" />
+        <action
+            android:id="@+id/action_fragmentListDevice_to_deviceInfoFragment"
+            app:destination="@id/deviceInfoFragment" />
+        <action
+            android:id="@+id/action_fragmentListDevice_to_updateDeviceInfoFragment"
+            app:destination="@id/updateDeviceInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.qunltisn.fragment.user.AccountFragment"
+        android:label="Tài khoản"
+        tools:layout="@layout/account_fragment">
+        <action
+            android:id="@+id/action_accountFragment_to_updateUserInfoFragment"
+            app:destination="@id/updateUserInfoFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notificaion"
+        android:name="com.example.qunltisn.fragment.NotificationFragment"
+        android:label="Thông báo"
+        tools:layout="@layout/notification_fragment" />
+    <fragment
+        android:id="@+id/addDeviceFragment"
+        android:name="com.example.qunltisn.fragment.device.AddDeviceFragment"
+        android:label="Thêm thiết bị" />
+    <fragment
+        android:id="@+id/updateUserInfoFragment"
+        android:name="com.example.qunltisn.fragment.user.UpdateUserInfoFragment"
+        android:label="Cập nhật tài khoản"
+        tools:layout="@layout/update_user_info_fragment" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.qunltisn.fragment.user.ChangePasswordFragment"
+        android:label="Đổi mật khẩu"
+        tools:layout="@layout/change_password_fragment" />
+    <fragment
+
+        android:id="@+id/deviceInfoFragment"
+        android:name="com.example.qunltisn.fragment.device.DeviceInfoFragment"
+        android:label="QLTS"
+        tools:layout="@layout/device_info_fragment" >
+        <argument
+            android:name="device"
+            app:argType="com.example.qunltisn.model.TSDeviceSetInfo"/>
+        <action
+            android:id="@+id/action_deviceInfoFragment_to_updateDeviceInfoFragment"
+            app:destination="@id/updateDeviceInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateDeviceInfoFragment"
+        android:name="com.example.qunltisn.fragment.device.UpdateDeviceInfoFragment"
+        android:label="QLTS">
+        <argument
+            android:name="device"
+            app:argType="com.example.qunltisn.model.TSDeviceSetInfo" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/organization"
+        android:name="com.example.qunltisn.fragment.organization.OrganizationFragment"
+        android:label="organization_fragment"
+        tools:layout="@layout/organization_fragment" />
+</navigation>
